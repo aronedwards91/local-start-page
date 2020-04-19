@@ -16,7 +16,7 @@ Click on Tools +, then backup, copy the string given.
 
 #### Future Additions
 
-news (preferably wikinews)
+Weather location switch, news (preferably wikinews)
 
 ## -
 ## Setup & other stuff
