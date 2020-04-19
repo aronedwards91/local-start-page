@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Col from "../data/colors.json";
 import { getBackupDataStr, importBackupString } from "../userData";
+import { RedX } from "../StyledItems";
 
 const Strings = {
   backup: "Backup",
@@ -64,8 +65,6 @@ const Backup = () => {
     </Container>
   );
 };
-
-const RedX = () => <span style={{ color: "red" }}>X</span>;
 
 const Container = styled.div`
   text-align: center;

@@ -7,6 +7,7 @@ import { Header } from "../Text";
 import Trello from "../Trello";
 import Backup from "../Backup";
 import Forecast from "../Forecast";
+import Tools from "../Tools";
 
 const Grid = styled.div`
   backgroundcolor: transparent;
@@ -29,7 +30,10 @@ const Layout = ({ children }) => (
     <Forecast />
     <Trello />
     <PushDown />
-    <Backup />
+
+    <Tools>
+      <Backup />
+    </Tools>
   </Grid>
 );
 
