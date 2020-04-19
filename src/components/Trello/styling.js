@@ -1,15 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Col from "../data/colors.json";
 
-export const BoardContainerCSS = {
-  width: "100%",
-  textAlign: "center",
-  overflowY: "auto",
-  maxHeight: "70vh",
-};
-
 export const board = styled.div`
+  width: 100%;
+  text-align: center;
+  overflow-a: auto;
+  max-height: 70vh;
   background-color: transparent;
 `;
 
@@ -38,6 +35,49 @@ const AddCardLink = styled.a`
     text-decoration: none;
   }
 `;
+
 export const AddCardStyled = ({ onClick, t }) => (
   <AddCardLink onClick={onClick}>{"Add Card"}</AddCardLink>
 );
+
+export const GlobalStyleOverride = createGlobalStyle`
+  .react-trello-card {
+    text-align: left;
+    border: 1px solid ${Col.main.darker};
+
+    & > header > span {
+      color: black;
+      font-weight: bold;
+    }
+    & > div {
+      font-size: 14px;
+    }
+  }
+
+  .comPlainTextContentEditable {
+    border: 0.5px solid lightgrey;
+  }
+
+  .smooth-dnd-container.vertical + div {
+    border-radius: 5px;
+    padding-bottom: 4px;
+
+    & > button {
+      border-radius: 5px;
+      border: 0.5px solid white;
+      font-weight: normal;
+    }
+  }
+
+  .smooth-dnd-container.horizontal {
+    & > div > section > div > button {
+      border-radius: 5px;
+      border: 0.5px solid white;
+      font-weight: normal;
+    }
+
+
+  } textarea {
+    font-family: sans-serif;
+  }
+`;

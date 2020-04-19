@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Board from "react-trello";
 import { getStorage, storeData } from "./storageManagement";
-import { BoardContainerCSS, board, lane, AddCardStyled } from "./styling";
+import {board, lane, AddCardStyled, GlobalStyleOverride } from "./styling";
 
 const components = {
   BoardWrapper: board,
   Section: lane,
   AddCardLink: AddCardStyled,
+  GlobalStyle: GlobalStyleOverride,
 };
 
 let initialData = {
@@ -54,7 +55,6 @@ const Trello = () => {
 
   return (
     <Board
-      style={BoardContainerCSS}
       editable
       canAddLanes
       editLaneTitle
