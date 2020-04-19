@@ -21,6 +21,7 @@ const Forecast = () => {
 
 const Link = styled.a`
   width: calc(100% - 40px);
+  height: 98px;
   margin: 12px 20px;
 `;
 
