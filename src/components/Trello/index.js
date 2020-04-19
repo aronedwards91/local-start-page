@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react"
-import Board from "react-trello"
-import { getStorage, storeData } from "./storageManagement"
-import { board } from "./styling"
+import React, { useEffect, useState } from "react";
+import Board from "react-trello";
+import { getStorage, storeData } from "./storageManagement";
+import { BoardContainerCSS, board, lane, AddCardStyled } from "./styling";
 
 const components = {
   BoardWrapper: board,
-}
+  Section: lane,
+  AddCardLink: AddCardStyled,
+};
+
 let initialData = {
   lanes: [
     {
       id: "lane1",
       title: "Planned Tasks",
-      label: "2/2",
       cards: [
         {
           id: "Card1",
@@ -31,28 +33,28 @@ let initialData = {
     {
       id: "lane2",
       title: "Completed",
-      label: "0/0",
       cards: [],
     },
   ],
-}
+};
 
 const Trello = () => {
-  const [boardData, setboardData] = useState(initialData)
-  const dataChange = argA => {
-    storeData(argA)
-  }
+  const [boardData, setboardData] = useState(initialData);
+  const dataChange = (argA) => {
+    storeData(argA);
+  };
 
   useEffect(() => {
     // Runs on user mount
-    const storedVal = getStorage()
+    const storedVal = getStorage();
     if (storedVal) {
-      setboardData(storedVal)
+      setboardData(storedVal);
     }
-  }, [])
+  }, []);
 
   return (
     <Board
+      style={BoardContainerCSS}
       editable
       canAddLanes
       editLaneTitle
@@ -60,7 +62,7 @@ const Trello = () => {
       onDataChange={dataChange}
       components={components}
     />
-  )
-}
+  );
+};
 
-export default Trello
+export default Trello;

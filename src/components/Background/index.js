@@ -8,7 +8,6 @@ const Background = styled.div`
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
-  overflow-y: scroll;
 `
 
 export default Background
