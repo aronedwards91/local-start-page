@@ -1,27 +1,34 @@
 import PropTypes from "prop-types";
 import React from "react";
-
 import styled from "styled-components";
-import Col from "../data/colors.json";
+
 import Background from "../Background";
-import {Header} from "../Text"
-import Trello from '../Trello';
+import { Header } from "../Text";
+import Trello from "../Trello";
+import Backup from "../Backup";
 
 const Grid = styled.div`
-  backgroundcolor: ${Col.main.medium};
+  backgroundcolor: transparent;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  height: auto;
+  margin: 0 0 60px;
+  min-height: 90vh;
+`;
+const PushDown = styled.div`
+  flex-grow: 1;
 `;
 
 const Layout = ({ children }) => (
-  <Background>
-    <Grid>
-      <Header>Welcome Home</Header>
-      <Trello />
-    </Grid>
-  </Background>
+  <Grid>
+    <Background />
+    <Header>Welcome Home</Header>
+    <Trello />
+    <PushDown/>
+    <Backup />
+  </Grid>
 );
 
 Layout.propTypes = {

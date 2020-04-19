@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Board from "react-trello";
-import { getStorage, storeData } from "./storageManagement";
+import {TrelloGetData, TrelloStore} from "../userData";
 import {board, lane, AddCardStyled, GlobalStyleOverride } from "./styling";
 
 const components = {
@@ -41,13 +41,13 @@ let initialData = {
 
 const Trello = () => {
   const [boardData, setboardData] = useState(initialData);
-  const dataChange = (argA) => {
-    storeData(argA);
+  const dataChange = data => {
+    TrelloStore(data);
   };
 
   useEffect(() => {
     // Runs on user mount
-    const storedVal = getStorage();
+    const storedVal = TrelloGetData();
     if (storedVal) {
       setboardData(storedVal);
     }

@@ -2,6 +2,10 @@
 
 This project aims to bundle a useful, editable homepage based on react into a single html file. This avoids CORS and ensures a super fast boot for your home page.
 
+### Notes
+
+Data is saved to local storage, clearing cookies over whole timeframe will clear this in most browsers.
+
 #### Currently includes:
 
 [Trello-style Board](https://github.com/rcdexta/react-trello)

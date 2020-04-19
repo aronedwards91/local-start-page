@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 import Col from "../data/colors.json"
 
@@ -8,6 +7,9 @@ const Background = styled.div`
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1000;
 `
 
 export default Background
