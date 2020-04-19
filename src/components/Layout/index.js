@@ -6,6 +6,7 @@ import Background from "../Background";
 import { Header } from "../Text";
 import Trello from "../Trello";
 import Backup from "../Backup";
+import Forecast from "../Forecast";
 
 const Grid = styled.div`
   backgroundcolor: transparent;
@@ -25,8 +26,9 @@ const Layout = ({ children }) => (
   <Grid>
     <Background />
     <Header>Welcome Home</Header>
+    <Forecast />
     <Trello />
-    <PushDown/>
+    <PushDown />
     <Backup />
   </Grid>
 );
