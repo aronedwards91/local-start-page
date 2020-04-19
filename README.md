@@ -4,15 +4,19 @@ This project aims to bundle a useful, editable homepage based on react into a si
 
 ### Notes
 
-Data is saved to local storage, clearing cookies over whole timeframe will clear this in most browsers.
+Data is saved to local storage, clearing cookies over whole timeframe will clear this in most browsers. 
+
+## Backup Data
+
+Click on Tools +, then backup, copy the string given.
 
 #### Currently includes:
 
-[Trello-style Board](https://github.com/rcdexta/react-trello)
+[Trello-style Board](https://github.com/rcdexta/react-trello), Weather from [weather.io](https://weatherwidget.io/)
 
 #### Future Additions
 
-Weather forecasting, news (preferably wikinews)
+news (preferably wikinews)
 
 ## -
 ## Setup & other stuff
