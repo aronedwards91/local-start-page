@@ -10,6 +10,7 @@ import {
   HorizPad,
   TextOutput,
   EditableSpan,
+  LongTextWrap,
 } from "./styling.js";
 
 const Backup = () => {
@@ -58,7 +59,11 @@ const Backup = () => {
             </ButtonStyled>
           </TextOutput>
         )}
-        {showbackupString && <TextOutput>{showbackupString}</TextOutput>}
+        {showbackupString && (
+          <TextOutput>
+            <LongTextWrap>{showbackupString}</LongTextWrap>
+          </TextOutput>
+        )}
 
         {showImportBox && (
           <TextOutput>

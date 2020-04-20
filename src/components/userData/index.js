@@ -1,6 +1,7 @@
 // Obj key used to
 export const localStorageKeys = {
   Trello: "trellodata",
+  WeatherIo: "weatheriodata"
 };
 
 export const getStorage = (key) => {
@@ -23,6 +24,15 @@ export const TrelloGetData = () => {
 };
 export const TrelloStore = (data) => {
   storeData(data, localStorageKeys.Trello);
+};
+
+// Weather Io
+
+export const WeatherGetData = () => {
+  return getStorage(localStorageKeys.WeatherIo);
+};
+export const WeatherDataStore = (data) => {
+  storeData(data, localStorageKeys.WeatherIo);
 };
 
 // Backup

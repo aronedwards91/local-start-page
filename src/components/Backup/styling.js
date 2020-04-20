@@ -44,6 +44,16 @@ export const TextOutput = styled.div`
   margin: 24px 80px;
   padding: 24px 12px;
 `;
+export const LongTextWrap = styled.span`
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+  white-space: -webkit-pre-wrap; /* Chrome & Safari */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: pre-wrap; /* CSS3 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+`;
 
 export const EditableSpan = ({ onChange, value }) => {
   const rows = value.length / 100 + 3;

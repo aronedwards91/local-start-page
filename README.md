@@ -12,11 +12,11 @@ Click on Tools +, then backup (or download file), copy the string given.
 
 #### Currently includes:
 
-[Trello-style Board](https://github.com/rcdexta/react-trello), Weather from [weather.io](https://weatherwidget.io/), backup/import
+[Trello-style Board](https://github.com/rcdexta/react-trello), changeable Weather from [weather.io](https://weatherwidget.io/), backup/import
 
 #### Future Additions
 
-Weather location switch, news (preferably wikinews)
+news (preferably wikinews)
 
 ## -
 ## Setup & other stuff
