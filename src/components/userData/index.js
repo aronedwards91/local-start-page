@@ -35,8 +35,8 @@ export const getBackupDataStr = () => {
   return JSON.stringify(dataObj);
 };
 
-export const importBackupString = (jsonString) => {
-  const dataObj = JSON.parse(jsonString);
+export const importBackupString = (jsonString, isObject) => {
+  const dataObj = isObject ? jsonString : JSON.parse(jsonString);
   const keysArr = Object.keys(localStorageKeys);
   let responseObj = "";
 
@@ -45,6 +45,7 @@ export const importBackupString = (jsonString) => {
       storeData(dataObj[key], localStorageKeys[key]);
       responseObj += "Data for " + key + " item was imported\n";
     } else {
+      console.warn("tried to import unknown object child of key:", key);
       responseObj += "unknown data for " + key + " item, not imported\n";
     }
   });

@@ -8,6 +8,7 @@ export const Strings = {
   importTrigger: "Import Data",
   backupGuide: "Copy & save string below, or ",
   backupDownload: "Download .JSON file",
+  backupFileImport: "Import file",
   importGuide:
     "Paste in string from backup(if file, open file, extract text) & click =>   ",
   importNote: "Note: A successfull import will refresh page.",
