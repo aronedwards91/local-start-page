@@ -8,11 +8,11 @@ Data is saved to local storage, clearing cookies over whole timeframe will clear
 
 ## Backup Data
 
-Click on Tools +, then backup, copy the string given.
+Click on Tools +, then backup (or download file), copy the string given.
 
 #### Currently includes:
 
-[Trello-style Board](https://github.com/rcdexta/react-trello), Weather from [weather.io](https://weatherwidget.io/)
+[Trello-style Board](https://github.com/rcdexta/react-trello), Weather from [weather.io](https://weatherwidget.io/), backup/import
 
 #### Future Additions
 
